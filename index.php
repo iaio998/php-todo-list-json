@@ -29,8 +29,8 @@
                 <img src="img/logo.png" alt="Logo" class="align-middle">
                 <h1 class="d-inline px-3 align-middle">TO DO LIST <i class="fa-solid fa-ghost"></i></h1>
                 <div class="my-4">
-                    <input type="text" class="form-control" v-model="todoText" @keyup.enter="addTask()">
-                    <button class=" btn btn-primary mx-2" @click="addTask()"><i class="fa-solid fa-wand-sparkles"></i>
+                    <input type="text" class="form-control" v-model="todoText" @keyup.enter="addTask">
+                    <button class=" btn btn-primary mx-2" @click="addTask"><i class="fa-solid fa-wand-sparkles"></i>
                         Add task </button>
                 </div>
                 <select class="form-select" aria-label="Default select example" v-model="filteredValue">
@@ -45,10 +45,10 @@
                 <ul class="list-group" v-if="todoList.length > 0">
                     <li class="list-group-item d-flex align-items-center align-middle justify-content-between m-0"
                         v-for="(task, index) in todoList" :key="index">
-                        <p class="m-0" :class="{'done':task.done}" @click="markAsDone(index)">{{task.text}}</p>
+                        <p class="m-0" :class="{'done':task.done}">{{task.text}}</p>
                         <div>
-                            <span class="fa-solid fa-check px-2" @click="markAsDone(index)"></span>
-                            <span class=" fa-solid fa-trash px-2" @click="removeTask(index)"></span>
+                            <span class="fa-solid fa-check px-2"></span>
+                            <span class=" fa-solid fa-trash px-2" @click="deleteTask(index)"></span>
                         </div>
                     </li>
                 </ul>

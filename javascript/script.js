@@ -5,7 +5,6 @@ const miaApp = createApp({
     return {
       apiUrl: "server.php",
       todoList: [],
-      lastId: 3,
       todoText: "",
       filteredValue: "",
     };
@@ -26,6 +25,26 @@ const miaApp = createApp({
         .finally((error) => {
           console.log(error);
         });
+    },
+    addTask() {
+      console.log(this.todoText);
+      // const data = {
+      //   task: this.newTask,
+      // };
+      const data = new FormData();
+      data.append("addTask", this.todoText);
+      axios.post(this.apiUrl, data).then((resp) => {
+        console.log(resp.data);
+        this.todoText = resp.data;
+      });
+    },
+    deleteTask(index) {
+      const data = new FormData();
+      data.append("deleteTask", index);
+      axios.post(this.apiUrl, data).then((resp) => {
+        console.log(resp.data);
+        this.todoList = resp.data;
+      });
     },
     // getIndex(id, array) {
     //   return array.findIndex((el) => el.id === id);

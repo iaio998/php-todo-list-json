@@ -1,14 +1,1 @@
-[
-    {
-      "text": "Procacciare cervelli",
-      "done": false
-    },
-    {
-      "text": "Intagliare le zucche",
-      "done": false
-    },
-    {
-      "text": "Affilare i denti",
-      "done": true
-    }
-  ]
+[{"text":"Procacciare cervelli","done":false},{"text":"Intagliare le zucche","done":false},{"text":"Affilare i denti","done":true}]
