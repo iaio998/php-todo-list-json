@@ -44,8 +44,8 @@
             <main>
                 <ul class="list-group" v-if="todoList.length > 0">
                     <li class="list-group-item d-flex align-items-center align-middle justify-content-between m-0"
-                        v-for="(task, index) in todoList" :key="index">
-                        <p class="m-0" :class="{'done':task.done}">{{task.text}}</p>
+                        v-for="(task, index) in todoList" @click="markAsDone(index)">
+                        <p class="m-0" :class="{'done': task.done}">{{task.text}}</p>
                         <div>
                             <span class="fa-solid fa-check px-2"></span>
                             <span class=" fa-solid fa-trash px-2" @click="deleteTask(index)"></span>
