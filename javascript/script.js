@@ -35,7 +35,8 @@ const miaApp = createApp({
       data.append("addTask", this.todoText);
       axios.post(this.apiUrl, data).then((resp) => {
         console.log(resp.data);
-        this.todoText = resp.data;
+        this.todoList = resp.data;
+        this.todoText = "";
       });
     },
     deleteTask(index) {
