@@ -47,14 +47,14 @@ const miaApp = createApp({
         this.todoList = resp.data;
       });
     },
-    // markAsDone(index) {
-    //   const data = new FormData();
-    //   data.append("markAsDone", index);
-    //   axios.post(this.apiUrl, data).then((resp) => {
-    //     // console.log(resp.data);
-    //     this.todoList = resp.data;
-    //   });
-    // },
+    markAsDone(index) {
+      const data = new FormData();
+      data.append("markAsDone", index);
+      axios.post(this.apiUrl, data).then((resp) => {
+        // console.log(resp.data);
+        this.todoList = resp.data;
+      });
+    },
   },
 });
 
