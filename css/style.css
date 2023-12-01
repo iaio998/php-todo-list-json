@@ -1,0 +1,57 @@
+body {
+    background-image: url(../img/38474-3840x2160-desktop-4k-halloween-wallpaper-image.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: rgba(255, 166, 0, 0.767);
+  }
+  #wrapper {
+    width: 100%;
+    height: 100vh;
+  }
+  .done {
+    text-decoration: line-through;
+  }
+  .form-control {
+    width: 50%;
+    margin: 0 auto;
+    display: inline-block;
+  }
+  .form-select {
+    width: 11%;
+    margin: 0 auto;
+    display: inline-block;
+    background-color: #3a3a3a80 !important;
+    color: white !important;
+  }
+  header img {
+    width: 80px;
+    height: 80px;
+    display: inline;
+  }
+  span,
+  p {
+    cursor: pointer;
+  }
+  ul {
+    width: 60%;
+  
+    margin: 0 auto;
+  }
+  li,
+  .form-control {
+    background-color: #3a3a3a80 !important;
+    color: white !important;
+  }
+  .btn-primary {
+    background-color: #3a3a3a80 !important;
+    color: white !important;
+    background-color: rgba(255, 166, 0, 0.233) !important;
+    border: 1px solid rgba(255, 166, 0, 0.445);
+  }
+  .btn-primary:hover {
+    border: 1px solid rgba(255, 0, 0, 0.363);
+  }
+  li:hover {
+    background-color: rgba(255, 166, 0, 0.589) !important;
+  }
+  
