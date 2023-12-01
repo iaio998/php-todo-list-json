@@ -42,9 +42,9 @@
             </header>
 
             <main>
-                <ul class="list-group" v-if="tasks.length > 0">
+                <ul class="list-group" v-if="todoList.length > 0">
                     <li class="list-group-item d-flex align-items-center align-middle justify-content-between m-0"
-                        v-for="(task, index) in filteredTasks()" :key="task.id">
+                        v-for="(task, index) in todoList" :key="index">
                         <p class="m-0" :class="{'done':task.done}" @click="markAsDone(index)">{{task.text}}</p>
                         <div>
                             <span class="fa-solid fa-check px-2" @click="markAsDone(index)"></span>
