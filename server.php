@@ -21,12 +21,12 @@ if (isset($_POST['deleteTask'])) {
     file_put_contents('data.json', json_encode($list));
 }
 ;
-if (isset($_POST['markAsDone'])) {
-    $done = $_POST['markAsDone'];
-    $list[$done]['done'] = !$list[$done]['done'];
-    file_put_contents('data.json', json_encode($list));
-}
-;
+// if (isset($_POST['markAsDone'])) {
+//     $done = $_POST['markAsDone'];
+//     $list[$done]['done'] = !$list[$done]['done'];
+//     file_put_contents('data.json', json_encode($list));
+// }
+// ;
 
 header('Content-Type: application/json');
 
